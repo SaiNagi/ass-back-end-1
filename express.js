@@ -44,6 +44,10 @@ const middleware = (request, response, next) => {
   next();
 };
 
+app.get("/", (request, response) => {
+  response.send("Welcome, please explore /posts");
+});
+
 app.get("/log", middleware, (request, response) => {
   response.send("Log");
 });
